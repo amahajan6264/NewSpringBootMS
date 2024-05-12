@@ -25,7 +25,6 @@ public class BillingProducerApplication {
 
 	//@Bean
     public DataSource dataSource() {
-	    System.out.println("Data source creattion");
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(dirver);
         dataSource.setUrl(url);
