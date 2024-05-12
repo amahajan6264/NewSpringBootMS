@@ -33,7 +33,7 @@ public class BillingController {
 			// TODO: handle exception
 		}
 		Integer billAmt = 400;
-		
+		System.out.println("getbill");
 		return new ResponseEntity<String>(dataSource2+"== Bill Amount Is : "+username+" : "+password+" : "+ + billAmt, HttpStatus.OK);
 	}
 }
