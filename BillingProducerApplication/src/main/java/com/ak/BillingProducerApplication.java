@@ -25,11 +25,13 @@ public class BillingProducerApplication {
 
 	//@Bean
     public DataSource dataSource() {
+	    System.out.println("Data source creattion")
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(dirver);
         dataSource.setUrl(url);
         dataSource.setUsername(username);
         dataSource.setPassword(password);
+	
         return dataSource;
     }
 	public static void main(String[] args) {
