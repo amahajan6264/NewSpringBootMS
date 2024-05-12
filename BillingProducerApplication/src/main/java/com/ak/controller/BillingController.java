@@ -40,6 +40,7 @@ public class BillingController {
 	public Long calculateBill() {
 		System.out.println("calculate the bill");
 		System.err.println("calculate the bill");
+		System.out.println("BillingController.calculateBill()");
 		return 1212L;
 	}
 }
