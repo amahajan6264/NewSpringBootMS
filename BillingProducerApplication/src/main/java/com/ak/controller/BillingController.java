@@ -36,4 +36,8 @@ public class BillingController {
 		System.out.println("getbill");
 		return new ResponseEntity<String>(dataSource2+"== Bill Amount Is : "+username+" : "+password+" : "+ + billAmt, HttpStatus.OK);
 	}
+	
+	public Long calculateBill() {
+		return 1212L;
+	}
 }
