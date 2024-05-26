@@ -3,6 +3,9 @@ package com.ak.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.logging.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.ak.config.WebConfig;
 import com.ak.model.AboutFormData;
 import com.ak.model.ApplyJob;
 import com.ak.model.Cources;
@@ -31,16 +35,20 @@ import com.ak.service.CourcesService;
 public class HomeController {
 
 	/* ======================= About form ========================= */
+	private static final Logger log=LoggerFactory.getLogger(WebConfig.class);
+
 	@Autowired
 	private AboutFormService aboutFormService;
 
 	@PostMapping(value = "/saveAboutFormData")
 	public ResponseEntity<Integer> postMethodName(@RequestBody AboutFormData aboutFormData) {
+		log.debug("HomeController.postMethodName()");
 		return new ResponseEntity<>(aboutFormService.saveFormData(aboutFormData).getId(), HttpStatus.OK);
 	}
 
 	@GetMapping(value = "/getFormData/{id}")
 	public ResponseEntity<String> checkFormDataStatus(@PathVariable(value = "id") Integer id) {
+		log.debug("HomeController.checkFormDataStatus()");
 		return new ResponseEntity<>(aboutFormService.checkFormStatus(id), HttpStatus.OK);
 	}
 
@@ -56,8 +64,10 @@ public class HomeController {
 
 	@GetMapping(value = "/jobs")
 	public ResponseEntity<List<Jobs>> getAllJobs() {
+		log.debug("HomeController.getAllJobs()");
 		List<Jobs> jobs = careerService.getAllJobs();
 		if (jobs.isEmpty()) {
+			log.debug("vacancy not there");
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} else {
 			return new ResponseEntity<>(jobs, HttpStatus.OK);
@@ -66,6 +76,7 @@ public class HomeController {
 
 	@GetMapping(value = "/country")
 	public ResponseEntity<Map<Integer, String>> getCountry() {
+		log.debug("HomeController.getCountry()");
 		return new ResponseEntity<>(locationDaoImpl.getCountry(), HttpStatus.OK);
 	}
 

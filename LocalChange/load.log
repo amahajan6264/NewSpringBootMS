@@ -1,0 +1,50 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Sun May 19 14:50:40 2024
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\sqlldrexmaple\load.ctl
+Data File:      C:\sqlldrexmaple\data.csv
+  Bad File:     C:\sqlldrexmaple\data.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table EMPLOYEES, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     *   ,       CHARACTER            
+NAME                                 NEXT     *   ,       CHARACTER            
+SALARY                               NEXT     *   ,       CHARACTER            
+
+
+Table EMPLOYEES:
+  2 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 193500 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             2
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Sun May 19 14:50:40 2024
+Run ended on Sun May 19 14:50:42 2024
+
+Elapsed time was:     00:00:01.85
+CPU time was:         00:00:00.19

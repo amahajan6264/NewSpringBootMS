@@ -1,11 +1,7 @@
 package com.ak.config;
 
-import javax.servlet.MultipartConfigElement;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.web.servlet.MultipartConfigFactory;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -31,10 +27,5 @@ public class WebConfig implements WebMvcConfigurer {
 				.allowedHeaders("*"); // Allow JSON and plain text headers
 	}
 	
-	@Bean
-    public MultipartConfigElement multipartConfigElement() {
-        MultipartConfigFactory factory = new MultipartConfigFactory();
-        return factory.createMultipartConfig();
-    }
 
 }
