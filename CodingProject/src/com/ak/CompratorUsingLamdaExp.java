@@ -1,8 +1,6 @@
 package com.ak;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class CompratorUsingLamdaExp {
@@ -15,10 +13,11 @@ public class CompratorUsingLamdaExp {
         names.add("Charlie");
         names.add("Alice");
         names.add("Bob");
-        
-        Collections.sort(names,(name1,name2)->name1.compareTo(name2));
+        r.run();
+        names.sort(String::compareTo);
         
         System.out.println(names);
+        
         
 		
 	}
