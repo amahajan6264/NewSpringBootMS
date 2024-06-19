@@ -26,6 +26,8 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
+		System.out.println("SecurityConfig.securityFilterChain()");
+		
 		List<UrlAccess> urlAccessList = urlAccessRepository.findAll();
 
 		urlAccessList.forEach(urlaccess->{
