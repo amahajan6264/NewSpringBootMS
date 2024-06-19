@@ -22,10 +22,10 @@ public class SortingUsingComparator {
 		System.out.println("===========Without sorting the data==============");
 		ar.forEach(System.out::println);
 		System.out.println("===========with sorting the data using the rollno========");
-		Collections.sort(ar,new  SortByRollno());
+		ar.sort(new  SortByRollno());
 		ar.forEach(System.out::println);
 		System.out.println("===========with sorting the data using the name========");
-		Collections.sort(ar,new  SortByName());
+		ar.sort(new  SortByName());
 		ar.forEach(System.out::println);
 		
 	}
