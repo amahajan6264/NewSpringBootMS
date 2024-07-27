@@ -65,6 +65,7 @@ class SortByName implements Comparator<Student>{
 	@Override
 	public int compare(Student o1, Student o2) {
 		System.out.println(o1.name+"+++++++++++"+o2.name);
+		System.out.println(o1.name+"+++++++++++"+o2.name);
 		return o1.name.compareTo(o2.name);
 	}
 	
