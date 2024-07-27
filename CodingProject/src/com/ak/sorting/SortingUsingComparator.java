@@ -55,6 +55,7 @@ class SortByRollno implements Comparator<Student> {
 	@Override
 	public int compare(Student o1, Student o2) {
 		System.out.println(o1.rollno+"=============="+o2.rollno);
+		System.out.println(o1.rollno+"=============="+o2.rollno);
 		return o1.rollno - o2.rollno;
 	}
 
