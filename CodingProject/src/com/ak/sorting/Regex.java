@@ -10,7 +10,6 @@ public class Regex {
 		System.out.println(m.matches());
 		while (m.find()) {
 			System.out.println(m.start() + "...." + m.end() + "...." + m.group());
-			System.out.println(m.start() + "...." + m.end() + "...." + m.group());
 		}
 
 		String input = "abcdmnopxyz";
