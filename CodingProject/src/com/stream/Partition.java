@@ -35,6 +35,13 @@ public class Partition {
 		List<Person> persons = Arrays.asList(new Person("Alice", 25), new Person("Bob", 30), new Person("Charlie", 35));
 		double averageAge = persons.stream().mapToInt(Person::getAge).average().orElse(0);
 		System.out.println(averageAge);
+		
+		List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5);
+		List<Integer> list2 = Arrays.asList(3, 4, 5, 6, 7);
+		List<Integer> intersection = list1.stream()
+				.filter(list2::contains)
+				.collect(Collectors.toList());
+		intersection.forEach(i->System.out.println(i));
 	}
 
 	@Data
