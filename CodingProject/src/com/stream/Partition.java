@@ -54,6 +54,7 @@ public class Partition {
 	public static String list(List<? extends Number> list) {
 		System.out.println(list);
 		System.out.println(list);
+		System.out.println(list);
 		return "";
 	}
 
