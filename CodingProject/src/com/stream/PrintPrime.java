@@ -13,6 +13,10 @@ public class PrintPrime {
 		numbers.stream().map(i -> Math.sqrt(i))
 		        .collect(Collectors.toList())
 		        .forEach(System.out::println);
+		
+		numbers.stream().map(i -> Math.sqrt(i))
+		        .collect(Collectors.toList())
+		        .forEach(System.out::println);
 
 	}
 }
